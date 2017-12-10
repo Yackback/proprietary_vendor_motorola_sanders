@@ -18,11 +18,13 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/bin/adspd:system/vendor/bin/adspd \
     vendor/motorola/sanders/proprietary/vendor/bin/adsprpcd:system/vendor/bin/adsprpcd \
     vendor/motorola/sanders/proprietary/vendor/bin/akmd09912:system/vendor/bin/akmd09912 \
+    vendor/motorola/sanders/proprietary/vendor/bin/btnvtool:system/vendor/bin/btnvtool \
     vendor/motorola/sanders/proprietary/bin/charge_only_mode:system/bin/charge_only_mode \
-    vendor/motorola/sanders/proprietary/vendor/bin/energy-awareness:system/vendor/bin/energy-awareness \
+    vendor/motorola/sanders/proprietary/bin/gatekeeperd:system/bin/gatekeeperd \
     vendor/motorola/sanders/proprietary/vendor/bin/cnd:system/vendor/bin/cnd \
+    vendor/motorola/sanders/proprietary/bin/hci_qcomm_init:system/bin/hci_qcomm_init \
     vendor/motorola/sanders/proprietary/vendor/bin/ims_rtp_daemon:system/vendor/bin/ims_rtp_daemon \
-    vendor/motorola/sanders/proprietary/vendor/bin/imsrcsd:system/vendor/bin/imsrcsd \
+    vendor/motorola/sanders/proprietary/vendor/bin/imscmservice:system/vendor/bin/imscmservice \
     vendor/motorola/sanders/proprietary/vendor/bin/imsdatadaemon:system/vendor/bin/imsdatadaemon \
     vendor/motorola/sanders/proprietary/vendor/bin/imsqmidaemon:system/vendor/bin/imsqmidaemon \
     vendor/motorola/sanders/proprietary/bin/ipacm-diag:system/bin/ipacm-diag \
@@ -32,10 +34,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/bin/pm-proxy:system/vendor/bin/pm-proxy \
     vendor/motorola/sanders/proprietary/vendor/bin/pm-service:system/vendor/bin/pm-service \
     vendor/motorola/sanders/proprietary/bin/ptt_socket_app:system/bin/ptt_socket_app \
-    vendor/motorola/sanders/proprietary/vendor/bin/qmi_motext_hook:system/vendor/bin/qmi_motext_hook \
+    vendor/motorola/sanders/proprietary/bin/qmi_motext_hook:system/bin/qmi_motext_hook \
     vendor/motorola/sanders/proprietary/vendor/bin/qseecomd:system/vendor/bin/qseecomd \
-    vendor/motorola/sanders/proprietary/vendor/bin/msm_irqbalance:system/vendor/bin/msm_irqbalance \
-    vendor/motorola/sanders/proprietary/vendor/etc/msm_irqbalance.conf:system/vendor/etc/msm_irqbalance.conf \
     vendor/motorola/sanders/proprietary/bin/radish:system/bin/radish \
     vendor/motorola/sanders/proprietary/vendor/bin/rmt_storage:system/vendor/bin/rmt_storage \
     vendor/motorola/sanders/proprietary/vendor/bin/ssr_setup:system/vendor/bin/ssr_setup \
@@ -71,8 +71,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml:system/vendor/etc/cne/wqeclient/VZW/VZW_profile4.xml \
     vendor/motorola/sanders/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml:system/vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml \
     vendor/motorola/sanders/proprietary/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml:system/vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml \
-    vendor/motorola/sanders/proprietary/etc/data/dsi_config.xml:system/vendor/etc/data/dsi_config.xml \
-    vendor/motorola/sanders/proprietary/etc/data/netmgr_config.xml:system/vendor/etc/data/netmgr_config.xml \
+    vendor/motorola/sanders/proprietary/etc/data/dsi_config.xml:system/etc/data/dsi_config.xml \
+    vendor/motorola/sanders/proprietary/etc/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
     vendor/motorola/sanders/proprietary/etc/firmware/a530_gpmu.fw2:system/etc/firmware/a530_gpmu.fw2 \
     vendor/motorola/sanders/proprietary/etc/firmware/a530_pfp.fw:system/etc/firmware/a530_pfp.fw \
     vendor/motorola/sanders/proprietary/etc/firmware/a530_pm4.fw:system/etc/firmware/a530_pm4.fw \
@@ -106,31 +106,32 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/etc/firmware/rampatch_tlv_3.2.tlv:system/etc/firmware/rampatch_tlv_3.2.tlv \
     vendor/motorola/sanders/proprietary/etc/firmware/sensorhub-blacklist.txt:system/etc/firmware/sensorhub-blacklist.txt \
     vendor/motorola/sanders/proprietary/etc/firmware/sensorhubfw.bin:system/etc/firmware/sensorhubfw.bin \
-    vendor/motorola/sanders/proprietary/etc/permissions/cneapiclient.xml:system/vendor/etc/permissions/cneapiclient.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.location.sdk.xml:system/vendor/etc/permissions/com.qti.location.sdk.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:system/vendor/etc/permissions/com.qti.snapdragon.sdk.display.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:system/vendor/etc/permissions/com.qualcomm.location.vzw_library.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.qualcomm.location.xml:system/vendor/etc/permissions/com.qualcomm.location.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/embms.xml:system/vendor/etc/permissions/embms.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/ims.xml:system/vendor/etc/permissions/ims.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/imscm.xml:system/vendor/etc/permissions/imscm.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/qcrilhook.xml:system/vendor/etc/permissions/qcrilhook.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/qti_permissions.xml:system/vendor/etc/permissions/qti_permissions.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/izat.xt.srv.xml:system/vendor/etc/permissions/izat.xt.srv.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:system/vendor/etc/permissions/mot_dtv_permissions.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.cameraone.xml:system/vendor/etc/permissions/com.motorola.cameraone.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/cneapiclient.xml:system/vendor/etc/permissions/cneapiclient.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:system/vendor/etc/permissions/com.motorola.hardware.dtv.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.dpmframework.xml:system/vendor/etc/permissions/com.qti.dpmframework.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/com.quicinc.cne.xml:system/vendor/etc/permissions/com.quicinc.cne.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/ConnectivityExt.xml:system/vendor/etc/permissions/ConnectivityExt.xml \
-    vendor/motorola/sanders/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/vendor/etc/permissions/qti-vzw-ims-internal.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.location.sdk.xml:system/etc/permissions/com.qti.location.sdk.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.snapdragon.sdk.display.xml:system/etc/permissions/com.qti.snapdragon.sdk.display.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.qualcomm.location.vzw_library.xml:system/etc/permissions/com.qualcomm.location.vzw_library.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.qualcomm.location.xml:system/etc/permissions/com.qualcomm.location.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/embms.xml:system/etc/permissions/embms.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/ims.xml:system/etc/permissions/ims.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/imscm.xml:system/etc/permissions/imscm.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/qcrilhook.xml:system/etc/permissions/qcrilhook.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/qti_permissions.xml:system/etc/permissions/qti_permissions.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/izat.xt.srv.xml:system/etc/permissions/izat.xt.srv.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/mot_dtv_permissions.xml:system/etc/permissions/mot_dtv_permissions.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.cameraone.xml:system/etc/permissions/com.motorola.cameraone.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/cneapiclient.xml:system/etc/permissions/cneapiclient.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.motorola.hardware.dtv.xml:system/etc/permissions/com.motorola.hardware.dtv.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.qti.dpmframework.xml:system/etc/permissions/com.qti.dpmframework.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/com.quicinc.cne.xml:system/etc/permissions/com.quicinc.cne.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/ConnectivityExt.xml:system/etc/permissions/ConnectivityExt.xml \
+    vendor/motorola/sanders/proprietary/etc/permissions/qti-vzw-ims-internal.xml:system/etc/permissions/qti-vzw-ims-internal.xml \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv.bin \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Argentina.bin \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Brazil.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_Brazil.bin \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_India.bin:system/etc/firmware/wlan/prima/WCNSS_qcom_wlan_nv_India.bin \
     vendor/motorola/sanders/proprietary/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat:system/etc/firmware/wlan/prima/WCNSS_wlan_dictionary.dat \
     vendor/motorola/sanders/proprietary/etc/xtra_root_cert.pem:system/etc/xtra_root_cert.pem \
+    vendor/motorola/sanders/proprietary/lib/android.hardware.biometrics.fingerprint@2.1.so:system/lib/android.hardware.biometrics.fingerprint@2.1.so \
     vendor/motorola/sanders/proprietary/lib/hw/camera.msm8953.so:system/lib/hw/camera.msm8953.so \
     vendor/motorola/sanders/proprietary/lib/hw/fingerprint.msm8953.so:system/vendor/lib/hw/fingerprint.vendor.msm8953.so \
     vendor/motorola/sanders/proprietary/lib/hw/sensors.iio.so:system/lib/hw/sensors.iio.so \
@@ -141,8 +142,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/lib/libadropbox.so:system/lib/libadropbox.so \
     vendor/motorola/sanders/proprietary/lib/libarcsoft_beautyshot.so:system/lib/libarcsoft_beautyshot.so \
     vendor/motorola/sanders/proprietary/lib/libcom_fingerprints_service.so:system/lib/libcom_fingerprints_service.so \
+    vendor/motorola/sanders/proprietary/lib/libdtvhal.so:system/lib/libdtvhal.so \
     vendor/motorola/sanders/proprietary/lib/libdtvtuner.so:system/lib/libdtvtuner.so \
-    vendor/motorola/sanders/proprietary/lib64/libdtvtuner.so:system/lib64/libdtvtuner.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libloc_api_v02.so:system/vendor/lib/libloc_api_v02.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libloc_ds_api.so:system/vendor/lib/libloc_ds_api.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libloc_api_v02.so:system/vendor/lib64/libloc_api_v02.so \
@@ -168,6 +169,8 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/bin/qti:system/vendor/bin/qti \
     vendor/motorola/sanders/proprietary/vendor/bin/slim_daemon:system/vendor/bin/slim_daemon \
     vendor/motorola/sanders/proprietary/vendor/bin/thermal-engine:system/vendor/bin/thermal-engine \
+    vendor/motorola/sanders/proprietary/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service:system/vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service \
+    vendor/motorola/sanders/proprietary/vendor/bin/hw/rild:system/vendor/bin/hw/rild \
     vendor/motorola/sanders/proprietary/vendor/firmware/libpn548ad_fw.so:system/vendor/firmware/libpn548ad_fw.so \
     vendor/motorola/sanders/proprietary/vendor/lib/egl/eglSubDriverAndroid.so:system/vendor/lib/egl/eglSubDriverAndroid.so \
     vendor/motorola/sanders/proprietary/vendor/lib/egl/libEGL_adreno.so:system/vendor/lib/egl/libEGL_adreno.so \
@@ -178,7 +181,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/flp.default.so:system/vendor/lib/hw/flp.default.so \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/gatekeeper.msm8953.so:system/vendor/lib/hw/gatekeeper.msm8953.so \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/keystore.msm8953.so:system/vendor/lib/hw/keystore.msm8953.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/hw/keystore.msm8953.so:system/vendor/lib64/hw/keystore.msm8953.so \
     vendor/motorola/sanders/proprietary/vendor/lib/hw/vulkan.msm8953.so:system/vendor/lib/hw/vulkan.msm8953.so \
     vendor/motorola/sanders/proprietary/vendor/lib/lib-dplmedia.so:system/vendor/lib/lib-dplmedia.so \
     vendor/motorola/sanders/proprietary/vendor/lib/lib-ims-rcscmjni.so:system/vendor/lib/lib-ims-rcscmjni.so \
@@ -235,10 +237,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/lib/libbccQTI.so:system/vendor/lib/libbccQTI.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libbtnv.so:system/vendor/lib/libbtnv.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libbtnv.so:system/vendor/lib64/libbtnv.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so:system/vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so:system/vendor/lib64/com.qualcomm.qti.bluetooth_audio@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti:system/vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti \
-    vendor/motorola/sanders/proprietary/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc:system/vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc \
     vendor/motorola/sanders/proprietary/vendor/lib/libc2d30-a5xx.so:system/vendor/lib/libc2d30-a5xx.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libc2d30_bltlib.so:system/vendor/lib/libc2d30_bltlib.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libchromaflash.so:system/vendor/lib/libchromaflash.so \
@@ -487,7 +485,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so:system/vendor/lib/rfsa/adsp/libscveObjectSegmentation_skel.so \
     vendor/motorola/sanders/proprietary/vendor/lib/rfsa/adsp/libscveT2T_skel.so:system/vendor/lib/rfsa/adsp/libscveT2T_skel.so \
     vendor/motorola/sanders/proprietary/vendor/lib/rfsa/adsp/libscveTextReco_skel.so:system/vendor/lib/rfsa/adsp/libscveTextReco_skel.so \
-    vendor/motorola/sanders/proprietary/vendor/radio/qcril_database/qcril.db:system/vendor/radio/qcril_database/qcril.db \
+    vendor/motorola/sanders/proprietary/vendor/qcril.db:system/vendor/qcril.db \
     vendor/motorola/sanders/proprietary/vendor/lib/libqmi_csvt_srvc.so:system/vendor/lib/libqmi_csvt_srvc.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libSecureUILib.so:system/vendor/lib/libSecureUILib.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libsecureui_svcsock.so:system/vendor/lib/libsecureui_svcsock.so \
@@ -1156,7 +1154,6 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/lib64/libflp.so:system/vendor/lib64/libflp.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libgdtap.so:system/vendor/lib64/libgdtap.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libgnsspps.so:system/vendor/lib64/libgnsspps.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libgnsspps.so:system/vendor/lib/libgnsspps.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libgnss.so:system/vendor/lib64/libgnss.so \
     vendor/motorola/sanders/proprietary/vendor/lib/libgnss.so:system/vendor/lib/libgnss.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/liblowi_client.so:system/vendor/lib64/liblowi_client.so \
@@ -1213,95 +1210,16 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/lib64/libdsi_netctrl.so:system/vendor/lib64/libdsi_netctrl.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libnetmgr.so:system/vendor/lib64/libnetmgr.so \
     vendor/motorola/sanders/proprietary/vendor/lib64/libqdi.so:system/vendor/lib64/libqdi.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libxml.so:system/vendor/lib64/libxml.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdrmfs.so:system/vendor/lib64/libdrmfs.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdrmtime.so:system/vendor/lib64/libdrmtime.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libGPreqcancel.so:system/vendor/lib64/libGPreqcancel.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libGPreqcancel_svc.so:system/vendor/lib64/libGPreqcancel_svc.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libqisl.so:system/vendor/lib64/libqisl.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libQSEEComAPI.so:system/vendor/lib64/libQSEEComAPI.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/librpmb.so:system/vendor/lib64/librpmb.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libSecureUILib.so:system/vendor/lib64/libSecureUILib.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libssd.so:system/vendor/lib64/libssd.so \
-    vendor/motorola/sanders/proprietary/lib/vendor.qti.hardware.fm@1.0.so:system/lib/vendor.qti.hardware.fm@1.0.so \
-    vendor/motorola/sanders/proprietary/lib64/vendor.qti.hardware.fm@1.0.so:system/lib64/vendor.qti.hardware.fm@1.0.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so:system/vendor/lib/vendor.qti.hardware.fm@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.fm@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so:system/vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so:system/vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/hw/gatekeeper.msm8953.so:system/vendor/lib64/hw/gatekeeper.msm8953.so \
-    vendor/motorola/sanders/proprietary/lib/egl/libGLES_android.so:system/lib/egl/libGLES_android.so \
-    vendor/motorola/sanders/proprietary/lib64/egl/libGLES_android.so:system/lib64/egl/libGLES_android.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libEGL_adreno.so:system/vendor/lib/libEGL_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libGLESv1_CM_adreno.so:system/vendor/lib/libGLESv1_CM_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libGLESv2_adreno.so:system/vendor/lib/libGLESv2_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libc2dcolorconvert.so:system/vendor/lib/libc2dcolorconvert.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libq3dtools_adreno.so:system/vendor/lib/libq3dtools_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libsdmcore.so:system/vendor/lib/libsdmcore.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libsdmutils.so:system/vendor/lib/libsdmutils.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/hw/vulkan.msm8953.so:system/vendor/lib64/hw/vulkan.msm8953.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libEGL_adreno.so:system/vendor/lib64/libEGL_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libGLESv1_CM_adreno.so:system/vendor/lib64/libGLESv1_CM_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libGLESv2_adreno.so:system/vendor/lib64/libGLESv2_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libc2dcolorconvert.so:system/vendor/lib64/libc2dcolorconvert.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libq3dtools_adreno.so:system/vendor/lib64/libq3dtools_adreno.so \
-    vendor/motorola/sanders/proprietary/vendor/lib/libdtvhal.so:system/vendor/lib/libdtvhal.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdtvhal.so:system/vendor/lib64/libdtvhal.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/mediadrm/libdrmclearkeyplugin.so:system/vendor/lib64/mediadrm/libdrmclearkeyplugin.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/mediadrm/libwvdrmengine.so:system/vendor/lib64/mediadrm/libwvdrmengine.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libadropbox.so:system/vendor/lib64/libadropbox.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/liblqe.so:system/vendor/lib64/liblqe.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libmdmcutback.so:system/vendor/lib64/libmdmcutback.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libmotext_inf.so:system/vendor/lib64/libmotext_inf.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libqcmaputils.so:system/vendor/lib64/libqcmaputils.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libqdp.so:system/vendor/lib64/libqdp.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libqmimotext.so:system/vendor/lib64/libqmimotext.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libqsap_sdk.so:system/vendor/lib64/libqsap_sdk.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libril-qc-ltedirectdisc.so:system/vendor/lib64/libril-qc-ltedirectdisc.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libril-qc-qmi-1.so:system/vendor/lib64/libril-qc-qmi-1.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libril-qc-radioconfig.so:system/vendor/lib64/libril-qc-radioconfig.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libril-qcril-hook-oem.so:system/vendor/lib64/libril-qcril-hook-oem.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/librilqmiservices.so:system/vendor/lib64/librilqmiservices.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/librilutils.so:system/vendor/lib64/librilutils.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libsensorndkbridge.so:system/vendor/lib64/libsensorndkbridge.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libsettings.so:system/vendor/lib64/libsettings.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libsubsystem_control.so:system/vendor/lib64/libsubsystem_control.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libSubSystemShutdown.so:system/vendor/lib64/libSubSystemShutdown.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libsystem_health_mon.so:system/vendor/lib64/libsystem_health_mon.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.am@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.ims@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.lpa@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.qcrilhook@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.qtiradio@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.uim@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.uim_remote_client@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.radio.uim_remote_server@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.esepowermanager@1.0_vendor.so:system/vendor/lib64/vendor.qti.esepowermanager@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/lib64/vendor.qti.esepowermanager@1.0.so:system/lib64/vendor.qti.esepowermanager@1.0.so \
-    vendor/motorola/sanders/proprietary/vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar:system/vendor/framework/vendor.qti.hardware.alarm-V1.0-java.jar \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libalarmservice_jni.so:system/vendor/lib64/libalarmservice_jni.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.alarm@1.0.so:system/vendor/lib64/vendor.qti.hardware.alarm@1.0.so \
-    vendor/motorola/sanders/proprietary/lib64/com.qualcomm.qti.imscmservice@1.0.so:system/lib64/com.qualcomm.qti.imscmservice@1.0.so \
-    vendor/motorola/sanders/proprietary/lib64/vendor.qti.imsrtpservice@1.0.so:system/lib64/vendor.qti.imsrtpservice@1.0.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so:system/vendor/lib64/com.qualcomm.qti.imscmservice@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-dplmedia.so:system/vendor/lib64/lib-dplmedia.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-imscmservice.so:system/vendor/lib64/lib-imscmservice.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-imsvideocodec.so:system/vendor/lib64/lib-imsvideocodec.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-imsvtextutils.so:system/vendor/lib64/lib-imsvtextutils.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-imsvtutils.so:system/vendor/lib64/lib-imsvtutils.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/lib-uceservice.so:system/vendor/lib64/lib-uceservice.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/libdiag_system.so:system/vendor/lib64/libdiag_system.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so:system/vendor/lib64/vendor.qti.hardware.camera.device@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so:system/vendor/lib64/vendor.qti.imsrtpservice@1.0-service-Impl.so \
-    vendor/motorola/sanders/proprietary/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so:system/vendor/lib64/vendor.qti.imsrtpservice@1.0_vendor.so \
-    vendor/motorola/sanders/proprietary/framework/com.qualcomm.qti.imscmservice@1.0-java.jar:system/framework/com.qualcomm.qti.imscmservice@1.0-java.jar
+    vendor/motorola/sanders/proprietary/vendor/lib64/libxml.so:system/vendor/lib64/libxml.so
 
 PRODUCT_PACKAGES += \
     TimeService \
+    datastatusnotification \
     embms \
     colorservice \
     com.qti.location.sdk \
     com.qti.snapdragon.sdk.display \
+    com.qualcomm.location.vzw_library \
     DTVPlayer \
     DTVService \
     embmslibrary \
@@ -1313,7 +1231,6 @@ PRODUCT_PACKAGES += \
     qcrilmsgtunnel \
     izat.xt.srv \
     qti-telephony-common \
-    QtiTelephonyServicelibrary \
     atfwd \
     cneapiclient \
     com.qti.dpmframework \
@@ -1327,8 +1244,6 @@ PRODUCT_PACKAGES += \
     com.quicinc.cne.api-V1.0-java \
     HotwordEnrollmentOKGoogleCS47L35 \
     HotwordEnrollmentTGoogleCS47L35 \
-    HotwordEnrollmentXGoogleCS47L35 \
-    QtiTelephonyService \
-    CNEService
+    HotwordEnrollmentXGoogleCS47L35
 
 
