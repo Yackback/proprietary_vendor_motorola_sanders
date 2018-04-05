@@ -22,6 +22,7 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/sanders/proprietary/vendor/bin/energy-awareness:system/vendor/bin/energy-awareness \
     vendor/motorola/sanders/proprietary/vendor/bin/cnd:system/vendor/bin/cnd \
     vendor/motorola/sanders/proprietary/vendor/bin/ims_rtp_daemon:system/vendor/bin/ims_rtp_daemon \
+    vendor/motorola/sanders/proprietary/vendor/bin/wcnss_service:system/vendor/bin/wcnss_service \
     vendor/motorola/sanders/proprietary/vendor/bin/imsrcsd:system/vendor/bin/imsrcsd \
     vendor/motorola/sanders/proprietary/vendor/bin/imsdatadaemon:system/vendor/bin/imsdatadaemon \
     vendor/motorola/sanders/proprietary/vendor/bin/imsqmidaemon:system/vendor/bin/imsqmidaemon \
